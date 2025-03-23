@@ -51,6 +51,8 @@ DELETE FROM "user" WHERE id = 4;
 SELECT * FROM "user";
 SELECT * FROM post;
 
+-- INNER JOIN
+
 
 SELECT title, username FROM post
     JOIN "user" ON post.user_id = "user".id;
@@ -64,3 +66,6 @@ SELECT post.id FROM post
 
 SELECT * FROM post as p
   INNER  JOIN "user" as u ON p.user_id = u.id;
+
+
+  
