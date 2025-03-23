@@ -69,3 +69,26 @@ SELECT * FROM post as p
 
 
   
+  SELECT * FROM "user"
+    JOIN post ON post.user_id = "user".id;
+
+
+INSERT INTO post (title, user_id) VALUES('this is a test post', NULL);
+
+SELECT * FROM post;  
+
+
+SELECT * FROM post as p
+  INNER  JOIN "user" as u ON p.user_id = u.id;
+
+-- LEFT JOIN
+
+SELECT * FROM post as p
+  LEFT JOIN "user" as u ON p.user_id = u.id;
+
+
+
+-- RIGHT JOIN
+
+SELECT * FROM post as p
+  RIGHT JOIN "user" as u ON p.user_id = u.id;
